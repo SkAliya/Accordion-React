@@ -21,7 +21,7 @@ const faqs = [
 ];
 
 export default function App() {
-  const [queInd, setQueInd] = useState(null);
+  //const [queInd, setQueInd] = useState(null);
   const [onclick,setonClick] = useState(null);
   // function handleQueId(id) {
   //   setQueInd(id);
@@ -32,7 +32,7 @@ export default function App() {
         <Accordion
           faq={faq}
           number={i + 1}
-          onClick={(num) => setQueInd(num)}
+          onClick={setQueInd}
           queInd={queInd}
           key={faq.title}
         />
