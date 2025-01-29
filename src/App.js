@@ -22,7 +22,7 @@ const faqs = [
 
 export default function App() {
   //const [queInd, setQueInd] = useState(null);
-  const [onclick,setonClick] = useState(null);
+  const [onClick,setOnClick] = useState(null);
   // function handleQueId(id) {
   //   setQueInd(id);
   // }
@@ -32,7 +32,7 @@ export default function App() {
         <Accordion
           faq={faq}
           number={i + 1}
-          onClick={setQueInd}
+          onClick={setOnClick}
           queInd={queInd}
           key={faq.title}
         />
@@ -41,8 +41,8 @@ export default function App() {
   );
 }
 
-function Accordion({ faq, number, queInd, onClick }) {
-  let isOpen = number === queInd;
+function Accordion({ faq, number, setOnClick, onClick }) {
+  let isOpen = number === onClick;
   // const [que, setQue] = useState(false);
   return (
     // <div className={`item ${que ? "open" : ""}`} onClick={() => setQue(!que)}>
